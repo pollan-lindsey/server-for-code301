@@ -28,12 +28,18 @@ app.get('/starwars', (req, res) =>{
 })
 
 
-app.get('/starwars/:id', (req, res) => {
-    res.send(
-        req.params.id
-    )
+app.get('/starwars/:id', (req, res) => { 
+    if (req.paramss.id !== 'leia') {
+        res.send(400)
+    } else {
+        res.send({
+            characterName: "leia",
+            characterAge: 95,
+            light_saber: "blue",
+            dad: "vader"
+        })
+    }
 })
-
 
 
 
