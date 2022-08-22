@@ -29,12 +29,9 @@ app.get('/starwars', (req, res) =>{
 
 
 app.get('/starwars/:id', (req, res) => {
-    res.send({
-        characterName: "leia",
-        characterAge: 95.5,
-        light_saber: "blue",
-        dad: "the good guy"
-    })
+    res.send(
+        req.params.id
+    )
 })
 
 
